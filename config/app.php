@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', '<img class="h-10" src="https://d2wks4gidu9630.cloudfront.net/f2567f63-532f-4458-9723-65e1b6fd12c3/svg/codinglabs-logo.svg" alt="logo"/>'),
 
     /*
     |--------------------------------------------------------------------------

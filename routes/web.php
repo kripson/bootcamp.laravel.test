@@ -17,4 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/courses', 'CourseController@index');
+Route::get('/courses/{course}', 'CourseController@show');
+
+Route::get('/courses/buy/{course}', 'CourseController@buy')->middleware('auth');
+
+Route::get('/student_courses', 'CourseController@studentCourses');

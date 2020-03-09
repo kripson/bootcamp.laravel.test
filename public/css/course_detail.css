@@ -1,0 +1,75 @@
+.sections {
+  display: grid;
+  overflow: scroll;
+  max-height: 350px;
+}
+
+.sections p {
+  margin: 0;
+  border-bottom: 1px solid grey;
+  min-height: 60px;
+  background-color: #e6e6e6;
+  display: grid;
+  align-content: center;
+  font-size: 1.25em;
+  padding: 10px;
+}
+
+.sections p:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px darkgrey;
+  background-color: #f2f2f2;
+}
+
+.sectionscontainer {
+  display: grid;
+}
+
+.coursepreviewsection {
+  box-shadow: 0px 0px 5px grey;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coursepreviewsection a {
+  width: 50%;
+}
+
+.coursepreviewsection a button {
+  width: 100%;
+}
+
+.coursepreview {
+  display: block;
+  width: 75%;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lessonplayer {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.text-lesson {
+  display: none;
+}
+
+.description {
+  margin-top: 25px;
+  display: grid;
+  row-gap: 25px;
+  text-align: justify;
+}
+
+.course-detail {
+  grid-template-rows: repeat(auto-fill, 500px);
+}
+
+.courseimage {
+  height: 500px;
+}
+
