@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->string('price');
             $table->string('imageUrl');
+             $table->string('tools');
             $table->string('description');
         });
     }

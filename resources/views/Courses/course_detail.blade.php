@@ -6,19 +6,27 @@
 @section('headlinks')
     <link rel="stylesheet" href = "{{asset('css/course_detail.css')}}">
 @section('content')
-    <div class="grid course-detail md:grid-cols-2 md:w-9/12 gap-10  mt-16 ml-auto mr-auto justify-center">
+    <div class="banner">
+    <div class="grid course-detail xl:grid-cols-2 md:w-9/12 gap-10 ml-auto mr-auto justify-center">
         <iframe class = "lessonplayer" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p class="text-lesson"></p>
-        <img class = "courseimage" src= '{{$course->imageUrl}}' alt = "course image"/>
+        <div class="description grid xl:grid-cols-2">
+        <img class = "courseimage self-end" src= '{{$course->imageUrl}}' alt = "course image"/>
+            <div class="align-self-center">
+                <h1 class="title font-bold text-orange-600 text-3xl">{{$course->name}}</h1>
+                <h2 class="text-white tools text-xl">Learn to Code using {{$course->tools}}</h2>
+            </div>
+
+            <h5 class = "xl:col-span-2 text-xl self-end text-white" >{{$course->description}}</h5>
+        </div>
 
 
         <div class="sectionscontainer">
 
         @if(!$enrolled)
-                <div class="coursepreviewsection grid">
-                <h4 class="text-center border-bottom">Preview this course</h4>
-                <iframe class = "coursepreview" width="350" height="250" src="https://www.youtube.com/embed/0AIjZJ2vqlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a class=" ml-auto mr-auto mt-4" href="{{url('/courses/buy/'.$course->id)}}"><button class="p-4 rounded transition duration-500 ease-in-out transform hover:scale-105 self-end bg-orange-400 text-white text-2xl">Buy the Course $ {{$course->price}}</button></a>
+                <div class="coursepreviewsection grid w-full xl:w-9/12">
+                <iframe class = "coursepreview" src="https://www.youtube.com/embed/0AIjZJ2vqlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <a class="buylink" href="{{url('/courses/buy/'.$course->id)}}"><button class="p-2 bg-green-400 transition duration-500 hover:bg-green-500 text-white buy text-xl">Buy the Course $ {{$course->price}}</button></a>
                 </div>
         @else
             <h4 class="text-center border-bottom">Course Content</h4>
@@ -37,13 +45,7 @@
         </div>
 
 
-        <div class="description grid">
-            <h1 class="title font-bold text-orange-600 text-3xl">{{$course->name}}</h1>
-            <h5>{{$course->description}}</h5>
-
-        </div>
-
-
+    </div>
     </div>
 @endsection
 
