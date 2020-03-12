@@ -35,6 +35,11 @@ class CourseController extends Controller{
 
     }
 
+    function section(Course $course, $sectionid)
+    {
+        return view("/Courses/section_lesson")->with('course',$course)->with('section',$course->sections()->where('id', $sectionid )->get()[0]);
+    }
+
     function buy(Course $course)
     {
 

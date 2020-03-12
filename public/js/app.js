@@ -49672,9 +49672,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/kripsonmanshrestha/code/bootcamp.laravel.test/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/kripsonmanshrestha/code/bootcamp.laravel.test/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/kripsonmanshrestha/code/bootcamp.laravel.test/resources/sass/course_detail.scss */"./resources/sass/course_detail.scss");
+__webpack_require__(/*! C:\Users\Kripson\Desktop\code\bootcampfolder\bootcamp.laravel.test\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\Kripson\Desktop\code\bootcampfolder\bootcamp.laravel.test\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\Kripson\Desktop\code\bootcampfolder\bootcamp.laravel.test\resources\sass\course_detail.scss */"./resources/sass/course_detail.scss");
 
 
 /***/ })

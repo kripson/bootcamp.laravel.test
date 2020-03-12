@@ -115,7 +115,7 @@ function displayTextLesson() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kripsonmanshrestha/code/bootcamp.laravel.test/resources/js/course/course_detail.js */"./resources/js/course/course_detail.js");
+module.exports = __webpack_require__(/*! C:\Users\Kripson\Desktop\code\bootcampfolder\bootcamp.laravel.test\resources\js\course\course_detail.js */"./resources/js/course/course_detail.js");
 
 
 /***/ })

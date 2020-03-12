@@ -13,50 +13,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     @yield('headlinks')
-    <script>
-
-        function displayVideoLesson()
-        {
-            let content = event.target.getAttribute("data-content");
-
-
-            let videoFrame = document.getElementsByTagName('iframe')[0];
-            let courseimage = document.getElementsByClassName('courseimage')[0];
-            let textPara = document.getElementsByClassName('text-lesson')[0];
-
-            textPara.style.display = 'none';
-            courseimage.style.display = 'none';
-            videoFrame.style.display = 'block';
-
-            videoFrame.src = content;
-        }
-
-        function displayTextLesson()
-        {
-            let content = event.target.getAttribute("data-content");
-
-            let textPara = document.getElementsByClassName('text-lesson')[0];
-            let previouslesson = document.getElementsByClassName('text-lesson')[0].childNodes[0];
-            let courseimage = document.getElementsByClassName('courseimage')[0];
-            let videoFrame = document.getElementsByTagName('iframe')[0];
-
-            videoFrame.style.display = 'none';
-            courseimage.style.display = 'none';
-            textPara.style.display = 'block';
-
-            let textLesson = document.createTextNode(content);
-            if(previouslesson)
-            {
-                textPara.replaceChild(textLesson,previouslesson);
-            }
-            else
-            {
-                textPara.appendChild(textLesson);
-            }
-
-
-        }
-    </script>
 
 </head>
 <body>

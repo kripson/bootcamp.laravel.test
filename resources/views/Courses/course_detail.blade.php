@@ -8,8 +8,6 @@
 @section('content')
     <div class="banner">
     <div class="grid course-detail xl:grid-cols-2 md:w-9/12 gap-10 ml-auto mr-auto justify-center">
-        <iframe class = "lessonplayer" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p class="text-lesson"></p>
         <div class="description grid xl:grid-cols-2">
         <img class = "courseimage self-end" src= '{{$course->imageUrl}}' alt = "course image"/>
             <div class="align-self-center">
@@ -28,16 +26,13 @@
                 <iframe class = "coursepreview" src="https://www.youtube.com/embed/0AIjZJ2vqlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <a class="buylink" href="{{url('/courses/buy/'.$course->id)}}"><button class="p-2 bg-green-400 transition duration-500 hover:bg-green-500 text-white buy text-xl">Buy the Course $ {{$course->price}}</button></a>
                 </div>
-        @else
-            <h4 class="text-center border-bottom">Course Content</h4>
+       @else
+            <h4 class="text-center font-bold border-bottom self-center pb-5">Course Content</h4>
             <div class="sections">
 
                 @foreach($sections as $section)
-                    @if($section->content_type == 'video')
-                        <p class="font-bold" data-content="{{$section->content}}" onclick='displayVideoLesson()'>Section {{$section->id}}:  {{$section->title}}</p>
-                    @else
-                        <p class="font-bold" data-content="{{$section->content}}" onclick='displayTextLesson()'>Section {{$section->id}}: {{$section->title}}</p>
-                    @endif
+                        <a href = {{url("courses/".$course->id."/".$section->id)}}><p class="font-bold">Section {{$section->id}}:  {{$section->title}}</p></a>
+                   
 
                 @endforeach
             </div>
